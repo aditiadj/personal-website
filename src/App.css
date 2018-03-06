@@ -13,16 +13,148 @@
 
 .App-intro {
   font-size: large;
-  padding-left: 18px;
   color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
+body {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: #34495e;
+}
+
+.loading-wrap {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin: -30px 0 0 -30px;
+  background: #777;
+  -moz-animation: rotation ease-in-out 2s infinite;
+  -webkit-animation: rotation ease-in-out 2s infinite;
+  -ms-animation: rotation ease-in-out 2s infinite;
+  animation: rotation ease-in-out 2s infinite;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+}
+
+.triangle1, .triangle2, .triangle3 {
+  border-width: 0 20px 30px 20px;
+  border-style: solid;
+  border-color: transparent;
+  border-bottom-color: #67cbf0;
+  height: 0;
+  width: 0;
+  position: absolute;
+  left: 10px;
+  top: -10px;
+  -moz-animation: fadecolor 2s 1s infinite;
+  -webkit-animation: fadecolor 2s 1s infinite;
+  -ms-animation: fadecolor 2s 1s infinite;
+  animation: fadecolor 2s 1s infinite;
+}
+
+.triangle2, .triangle3 {
+  content: '';
+  top: 20px;
+  left: 30px;
+  -moz-animation-delay: 1.1s;
+  -webkit-animation-delay: 1.1s;
+  -ms-animation-delay: 1.1s;
+  animation-delay: 1.1s;
+}
+
+.triangle3 {
+  left: -10px;
+  -moz-animation-delay: 1.2s;
+  -webkit-animation-delay: 1.2s;
+  -ms-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+
+@-moz-keyframes rotation {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  20% {
+    -moz-transform: rotate(360deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  20% {
+    -webkit-transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-ms-keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  20% {
+    -webkit-transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  20% {
     transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes fadecolor {
+  0% {
+    border-bottom-color: #eee;
+  }
+  100% {
+    border-bottom-color: #67cbf0;
+  }
+}
+
+@-webkit-keyframes fadecolor {
+  0% {
+    border-bottom-color: #eee;
+  }
+  100% {
+    border-bottom-color: #67cbf0;
+  }
+}
+
+@-ms-keyframes fadecolor {
+  0% {
+    border-bottom-color: #eee;
+  }
+  100% {
+    border-bottom-color: #67cbf0;
+  }
+}
+
+@keyframes fadecolor {
+  0% {
+    border-bottom-color: #eee;
+  }
+  100% {
+    border-bottom-color: #67cbf0;
   }
 }
 
@@ -55,83 +187,6 @@
 @keyframes love {
   to {
     transform: scale(1.2);
-  }
-}
-
-@import url('https://fonts.googleapis.com/css?family=Roboto:700');
-body {
-  margin: 0px;
-  font-family: 'Roboto';
-  text-align: center;
-}
-
-#container {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-  text-transform: uppercase;
-  font-size: 36px;
-  font-weight: bold;
-  position: fixed;
-  width: 100%;
-  bottom: 45%;
-  display: block;
-}
-
-#flip {
-  height: 50px;
-  overflow: hidden;
-}
-
-#flip>div>div {
-  color: #fff;
-  padding: 4px 12px;
-  height: 45px;
-  margin-bottom: 45px;
-  display: inline-block;
-}
-
-#flip div:first-child {
-  animation: show 5s linear infinite;
-}
-
-#flip div div {
-  background: #42c58a;
-}
-
-#flip div:first-child div {
-  background: #4ec7f3;
-}
-
-#flip div:last-child div {
-  background: #DC143C;
-}
-
-@keyframes show {
-  0% {
-    margin-top: -270px;
-  }
-  5% {
-    margin-top: -180px;
-  }
-  33% {
-    margin-top: -180px;
-  }
-  38% {
-    margin-top: -90px;
-  }
-  66% {
-    margin-top: -90px;
-  }
-  71% {
-    margin-top: 0px;
-  }
-  99.99% {
-    margin-top: 0px;
-  }
-  100% {
-    margin-top: -270px;
   }
 }
 

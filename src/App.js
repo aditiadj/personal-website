@@ -5,24 +5,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-         <div id="container">
-            Make
-          <div id="flip">
-           <div>
-             <div>Coding</div>
-           </div>
-           <div>
-             <div>Yourself</div>
-           </div>
-           <div>
-             <div>Everything</div>
-           </div>
-          </div>
-            AweSoMe!
-         </div>
-        <p className="App-intro">
-          Made with <span class="love">♥</span> in Purwasari
-        </p>
+        <div class="loading-wrap">
+          <div class="triangle1"></div>
+          <div class="triangle2"></div>
+          <div class="triangle3"></div>
+        </div>
+        <h1>Underconstruction</h1>
+            <p className="App-intro">
+              Made with <span className="love">♥</span> in Purwasari
+            </p>
       </div>
     );
   }
